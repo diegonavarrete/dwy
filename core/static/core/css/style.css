@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    list-style: none;
+}
+
+
+.logo{
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 100px;
+   background-color: black;
+    color: white;
+  
+}
+
+header nav {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header .logo img {
+        width: 90%;
+    }
+    header nav li a {
+        font-size: 15px;
+    }
+}
+
+/* BANNER */
+section {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px
+}
+
+@media (max-width:1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width:600px) {
+    section {
+        padding: 130px 30px;
+    }
+}
+
+
+
+.sli a.sli-btn {
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: crimson;
+}
+
+
+
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.galeria img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+
+.sobre-titulo{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 50px;
+    margin-bottom: 2%;
+}
+
+.sobre-contenido li {
+    padding: 20px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.sobre-izq {
+    flex-basis: 50%;
+    background-image: url('../img/autos.jpeg');
+}
+
+.sobre-der {
+    flex-basis: 50%;
+}
+
+.sobre-contenido p {
+    margin-bottom: 20px;
+    text-align: start;
+    padding-left: 0;
+}
+
+
+
+@media (max-width:1000px) {
+    .sobre-izq, .sobre-der {
+        flex-basis: 100%;
+    }
+
+    .sobre-contenido p {
+        text-align: justify;
+    }
+
+    .sobre-contenido li {
+        padding: 8px;
+    }
+
+    .sobre-der {
+        text-align: center;
+    }
+}
+
+
+
+
+
+/*Registro Login*/
+
+.Registro-contenido {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Registro-titulo {
+    font-size: 50px;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+.Registro-contenido li {
+    height: 600px;
+    padding: 20px;
+}
+
+.Registro-izq {
+    flex-basis: 50%;
+}
+
+.Registro-der {
+    flex-basis: 50%;
+}
+
+input[type="text"], input[type="date"], input[type="file"], input[type="number"], input[type="password"] {
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid rgb(184, 181, 181);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    font-size: 20px;
+}
+
+#formulario {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.btn {
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-verde {
+    background-color: rgb(46, 172, 42);
+    margin-right: 10px;
+}
+
+.btn-verde:hover {
+    background-color: rgb(22, 75, 20);  
+}
+
+.btn-rojo {
+    background-color: rgb(219, 57, 57);
+}
+
+.btn-rojo:hover {
+    background-color: rgb(87, 19, 19);
+}
+
+@media (max-width:1000px) {
+    .contacto-izq, .contacto-der {
+        flex-basis: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+/* FOOTER */
+footer {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 50px px;
+}
+
+
+
+
+.footer a {
+    color:black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/*Login*/
+.boton {
+    width: 100%;
+    height: 60px;
+    background: #017bab;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+  }
+  
+  
+  .login a {
+    color:black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .login{
+      background-color:whitesmoke;
+
+  }
+
+  /* SERVICIOS */
+#Servicios {
+    background: rgb(207, 204, 204);
+}
+ 
+.servicios-contenido {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+ 
+.servicios-contenido li {
+    padding: 0 30px;
+    flex-basis: 25%;
+    text-align: center;
+}
+ 
+.servicios-contenido li i {
+    margin-bottom: 20px;
+    font-size: 50px;
+    color:black
+}
+ 
+.servicios-contenido li h4 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+ 
+.servicios-titulo {
+    margin-bottom: 4%;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+ 
+@media (max-width:1000px) {
+    .servicios-contenido li {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+ 
+    .servicios-titulo {
+        font-size: 40px;
+        margin-bottom: 8%;
+    }
+}
+
+
+.checked {
+    color: orange;
+  }
+
+  .feedback {
+    /* FLEX */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: initial;
+    justify-content: center;
+    width: 120%;
+}
+
+.feedback p{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.feedback-estrellas{
+    display: flex;
+    justify-content: start;
+    width: 40%;
+}

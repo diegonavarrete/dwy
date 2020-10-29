@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Lavado</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    {% block css%}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div>
+                <img src="{% static 'core/img/014-car-wash-2.png' %}" alt="logo" class="logo">
+            </div>
+            <nav>
+                <li><a href="{%url 'index'%}">Inicio</a></li>
+                <li><a href="#sobre">Vision y Mision</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#agendar">Agendar</a></li>
+                <li><a href="{% url 'galeria' %}">Galeria</a></li>
+            </nav>
+        </header>
+        {% block contenido %}
+        {% endblock %}
+
+
+        <footer id="footer">
+            <h3>TODOS LOS DERECHOS SON RESERVADOS A DUOC 2020</h3>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="{% url 'registro'%}">Registrarse</a></li>
+            <li><a href="{% url 'registroInsumo'%}">Registrar Insumo</a></li>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.slider').bxSlider();
+            });
+        </script>
+
+        {% block js%}
+        {% endblock %}
+
+</body>
+
+</html>

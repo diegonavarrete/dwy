@@ -1,0 +1,29 @@
+{%extends 'core/base.html' %}
+{%load static %}
+
+
+{% block css%}
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+{% endblock %}
+{% block js%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+{% endblock %}
+
+{% block contenido %}
+<div class="galeria">
+    <a data-fancybox="gallery" href="{% static 'core/img/galeria.jpg' %}"><img src="{% static 'core/img/galeria.jpg' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/galeria1.jpg' %}"><img src="{% static 'core/img/galeria1.jpg' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/lavado1.jpg' %}"><img src="{% static 'core/img/lavado1.jpg' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/lavado3.jpg' %}"><img src="{% static 'core/img/lavado3.jpg' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/autos.jpeg' %}"><img src="{% static 'core/img/autos.jpg' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/pexels-pixabay-210627.jpg' %}"><img src="{% static 'core/img/pexels-pixabay-210627.jpg' %}"></a>
+
+</div>
+
+{% endblock %}
+
+
+

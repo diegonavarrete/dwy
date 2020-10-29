@@ -1,0 +1,135 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+{% endblock %}
+
+{% block js%}
+{% endblock %}
+
+{% block contenido %}
+<section class="sli">
+    <div class="slider">
+        <div> <img src="{% static 'core/img/slider.jpg' %}" alt=""></div>
+        <div> <img src="{% static 'core/img/slider2.jpg' %}" alt=""></div>
+        <div> <img src="{% static 'core/img/sliderr.jpg' %}" alt=""></div>
+    </div>
+    <h1>Expertos en Limpieza</h1>
+    <h2>desde 2020 </h2>
+    <a href="" class="sli-btn">Agendar</a>
+</section>
+
+
+
+<section class="sobre" id="sobre">
+    <h3 class="sobre-titulo">Mision Vision</h3>
+    <ul class="sobre-contenido">
+        <li class="sobre-izq"></li>
+        <li class="sobre-der">
+            <h2> Centrate en lo importante nosostros nos encargamos de la limpieza</h2>
+            <p> Mediante altos estandares de higiene logramos ofrecer lo mejor en limpieza en relacion calidad.
+                Desinfectamos tu vehiculo para que tu unica preocupacion sea el enfoque en una vida mas simple
+                junto a tus seres queridos </p>
+        </li>
+    </ul>
+</section>
+
+<section class="Servicios" id="servicios">
+    <h3 class="servicios-titulo">Servicios ofrecidos</h3>
+    <ul class="servicios-contenido">
+        <li>
+            <i img class="fa fa-user-circle" aria-hidden="true"></i>
+            <h4>Usuarios</h4>
+            <p>En LavadoAuto podras inscribirte para obtener beneficios y todos los servicios que necesitas
+                para que tu auto esté siempre como nuevo.</p>
+        </li>
+        <li>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <h4>Limpieza Total</h4>
+            <p>Con toda nuestra maquinaria ofrecemos un servicio completo de
+                limpieza externa en el menor tiempo posible.
+            </p>
+        </li>
+        <li>
+            <i class="fa fa-ban" aria-hidden="true"></i>
+            <h4>COVID-19</h4>
+            <p>Nuestros servicios permiten desinfectar por completo tu auto
+                para que puedas movilizarte de manera segura.
+            </p>
+        </li>
+        <li>
+            <i class="fa fa-car"></i>
+            <h4>LavadoAuto</h4>
+            <p> Aqui encontrar diversos productos y servicios para la mantención del aseo de tu vehículo.
+                Te invitamos a conocer nuestras estaciones de Servicio,
+                diseñadas con la última tecnología para que mantengas
+                tu automóvil limpio y brillante con la máxima seguridad.</p>
+        </li>
+    </ul>
+</section>
+
+
+
+<div class="feedback" id="feedback">
+    <li>
+        <h4>Excelente Servicio</h4>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>El servicio ha sido extremadamente rapido y el auto quedo excelente.
+        </p>
+    </li>
+
+    <li>
+   
+        <h4>Buena Atencion</h4>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>Muy cordiales en la hora de atender y un muy buen trabajo.
+        </p>
+    </li>
+
+
+    <li>
+        <h4>Maravilloso</h4>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>El servicio ha sido mejor de lo que esperaba.
+        </p>
+    </li>
+
+
+</div>
+
+
+
+
+
+<section class="agendar" id="agendar">
+    <h3 class="agendar-titulo">Agendar Reserva</h3>
+    <ul class="agendar-contenido">
+        <div id="agendarhora"></div>
+        <form action="" method="get">
+
+            <label for="txtNombre">Nombre:</label>
+            <input type="text" name="txtNombre" id="txtNombre" minlength="3" required>
+            <label for="txtApellido">Apellido:</label>
+            <input type="text" name="txtApellido" id="txtApellido" minlength="3" required>
+            <label for="txtModelo">Modelo Auto:</label>
+            <input type="text" name="txtModelo" id="txtModelo" minlength="3" required>
+            <label for="txtFecha">Fecha de Entrada:</label>
+            <input type="date" name="txtFecha" id="txtFecha">
+
+            <input class="btn btn-verde" type="submit" name="btnEnviar" id="btnEnviar">
+            <input class="btn btn-rojo" type="reset" name="btnLimpiar" id="btnLimpiar">
+    </ul>
+</section>
+{% endblock %}

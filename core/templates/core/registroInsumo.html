@@ -1,0 +1,32 @@
+{%extends 'core/base.html' %}
+{%load static %}
+
+
+{% block contenido %}
+<section class="Registro" id="Registro">
+    <h3 class="Registro-titulo">Registro de insumos</h3>
+    <ul class="Registro-contenido">
+        <li class="Registro-izq">
+            <div id="Registro">
+                <form action="" method="get">
+                    <label for="txtNombreInsumo">Nombre de Insumo:</label>
+                    <input type="text" name="txtNombreInsumo" id="insumo" minlength="3" maxlength="120" required>
+
+                    <label for="txtPrecio">Precio de Insumo:</label>
+                    <input type="number" name="txtPrecio" id="Precio" aria-valuemin="1" required>
+
+                    <label for="txtDescripcion">Descripcion:</label>
+                    <input type="text" name="txtDescripcion" id="Descripcion" minlength="3" maxlength="200" >
+
+                    <input class="btn btn-verde" type="submit" name="btnEnviar" id="Registrar">
+                    <input class="btn btn-rojo" type="reset" name="btnLimpiar" id="Limpiar">
+
+
+                </form>
+            </div>
+        </li>
+
+    </ul>
+</section>
+
+{% endblock %}

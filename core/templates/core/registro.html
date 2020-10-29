@@ -1,0 +1,56 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+{% endblock %}
+
+{% block js%}
+<script src="{% static 'core/js/js.js' %}"></script>
+{% endblock %}
+
+{% block contenido %}
+<section class="Registro" id="Registro" onsubmit="return validar();">
+    <h3 class="Registro-titulo">Registro </h3>
+    <ul class="Registro-contenido">
+        <li class="Registro-izq">
+            <div id="Registro">
+                <form action="" method="get">
+                    <label for="txtNombre">Nombre :</label>
+                    <input type="text" name="txtNombre" id="nombre">
+
+                    <label for="txtApellido">Apellido :</label>
+                    <input type="text" name="txtApellido" id="apellido">
+
+                    <label for="txtUser">Nombre de Usuario :</label>
+                    <input type="text" name="txtUser" id="user">
+
+                   
+                    <label for="txtRut">Rut ( Ej:12.025.365-6):</label>
+                    <input type="text" name="txtRut" id="rut">
+
+                
+
+                    <label for="txtPass">Contraseña:</label>
+                    <input type="password" name="txtPass" id="pass" >
+
+                    <label for="txtCorreo">Correo :</label>
+                    <input type="email" name="txtCorreo" id="correo">
+
+                    <label for="tipo">Tipo de Usuario:</label>
+                    <select name="cboTipo" id="tipo">
+                        <option value="1">Cliente</option>
+                        <option value="0">Colaborador</option>
+                    </select>
+
+                    <input class="btn btn-verde" type="submit" name="btnEnviar" id="btnEnviar">
+                    <input class="btn btn-rojo" type="reset" name="btnLimpiar" id="btnLimpiar">
+
+                </form>
+            </div>
+        </li>
+        <li class="Registro-der">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.2616889794604!2d-70.63104608487738!3d-33.4424880807762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a74b84874d%3A0xa7b92caf71764ee5!2sLavado%20de%20Veh%C3%ADculos%20en%20Providencia%2C%20Santiago%20AUTOMECHANIX%20CAR%20WASH!5e0!3m2!1ses!2scl!4v1600730982229!5m2!1ses!2scl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </li>
+    </ul>
+</section>
+{% endblock %}
