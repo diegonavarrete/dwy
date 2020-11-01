@@ -28,3 +28,18 @@ class Usuario(models.Model):
 
     def __str__(self):
         return self.rut
+
+class Vision(models.Model):
+    Vision = models.CharField(max_length=40)
+    Mision = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.Vision
+
+class Galeria(models.Model):
+    nombre = models.CharField(max_length=40)
+    imagen = models.ImageField(upload_to="insumos", null = True)
+
+    def __str__(self):
+        return self.nombre
+
